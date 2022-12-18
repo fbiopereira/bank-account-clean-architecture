@@ -36,4 +36,8 @@ public class BankOperationsImpl implements BankOperations {
     public void resetBank() {
         bank.getAccounts().clear();
     }
+
+    public Bank getBank(){
+        return bank;
+    }
 }
