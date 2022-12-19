@@ -11,8 +11,10 @@ repositories {
 }
 
 ext {
-    junitVersion = "5.9.1"
     springBootVersion = "2.7.6"
+    junitVersion = "5.9.1"
+    cucumberVersion = "7.10.1"
+
 }
 
 dependencies {
