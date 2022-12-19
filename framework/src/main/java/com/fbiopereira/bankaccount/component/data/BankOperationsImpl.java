@@ -1,4 +1,4 @@
-package com.fbiopereira.bankaccount.data;
+package com.fbiopereira.bankaccount.component.data;
 
 import exceptions.AccountNotFoundException;
 import model.Account;

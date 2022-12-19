@@ -1,4 +1,4 @@
-package com.fbiopereira.bankaccount.data;
+package com.fbiopereira.bankaccount.component.data;
 
 import model.Account;
 import org.springframework.context.annotation.Scope;
