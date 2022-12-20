@@ -1,0 +1,6 @@
+rootProject.name = 'bank-account-clean-architecture'
+include 'domain'
+include 'use_case'
+include 'framework'
+include 'entrypoint'
+

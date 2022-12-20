@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "jacoco"
+}
+
+group 'com.fbiopereira.bankaccountcleanarchitecture'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = "2.7.6"
+    junitVersion = "5.9.1"
+    cucumberVersion = "7.10.1"
+
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
