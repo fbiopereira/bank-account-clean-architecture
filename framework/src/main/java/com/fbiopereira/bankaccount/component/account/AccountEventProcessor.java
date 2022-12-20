@@ -59,21 +59,22 @@ public class AccountEventProcessor {
 
     public Map<AccountType,Account> transfer(String originAccountId, String destinationAccountId, int amount){
 
-        Account originAccount;
 
         try{
-        originAccount = bankOperations.findAccountByID(originAccountId);
+            Account originAccount = withdraw(originAccountId, amount);
+            Account destinationAccount = deposit(destinationAccountId, amount);
+            EnumMap<AccountType,Account> returnMap = new EnumMap<>(AccountType.class);
+            returnMap.put(origin, originAccount);
+            returnMap.put(destination, destinationAccount);
+            return returnMap;
         }
         catch (AccountNotFoundException exception){
             throw new AccountNotFoundException(ACCOUNT_DOES_NOT_EXIST.getCode(), ACCOUNT_DOES_NOT_EXIST.getMessage());
         }
 
-        Account destinationAccount = deposit(destinationAccountId, amount);
-        EnumMap<AccountType,Account> returnMap = new EnumMap<>(AccountType.class);
-        returnMap.put(origin, originAccount);
-        returnMap.put(destination, destinationAccount);
 
-        return returnMap;
+
+
 
 
 

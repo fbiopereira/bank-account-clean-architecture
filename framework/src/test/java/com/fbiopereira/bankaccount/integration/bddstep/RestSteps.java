@@ -23,7 +23,6 @@ public class RestSteps {
 
     @Autowired
     private WebApplicationContext webApplicationContext;
-
     public static MockMvc contextMockMvc;
     public static String contextJson = "";
     public static ResultActions contextResultActions;
